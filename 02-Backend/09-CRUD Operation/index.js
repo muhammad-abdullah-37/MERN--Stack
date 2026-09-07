@@ -1,3 +1,4 @@
+const e = require('express');
 const foodMenu = require('./data')
 const {Auth} = require('./middleware/auth')
 const express = require('express');
@@ -22,20 +23,29 @@ app.get('/',(req,res,) => {
  
 // Get request for all food items 
 app.get('/food',(req,res) => {
-    res.status(200).send(foodMenu)
+    try {
+        res.status(200).send(foodMenu)
+    } catch (error) {
+        res.send('Some Error Occured : ', error)
+    }
 })
 
 
 // Post request for adding the items
 app.post('/admin',(req,res) => {
-        foodMenu.push(req.body);
-        res.status(201).send('Item Added Successfully')   
+        try {
+            foodMenu.push(req.body);
+            res.status(201).send('Item Added Successfully')
+        } catch (error) {
+            res.send('Some Error Occured : ', error)
+        }   
 })
 
 
 // Deletin an item from the food app 
 app.delete('/admin/:id',(req,res) => {
-        const id = parseInt(req.params.id);
+    try {
+            const id = parseInt(req.params.id);
         const index = foodMenu.findIndex(item => item.id === id)
         if (index > 0 ) {
             foodMenu.splice(index,1);
@@ -43,12 +53,16 @@ app.delete('/admin/:id',(req,res) => {
         } else {
             res.status(400).send('Bad request')
         }
+    } catch (error) {
+        res.send("Some Error Occured : ", error)
+    }
 })
 
 
 // Patch request for an update in app
 app.patch('/admin',(req,res) => {
-        const id = parseInt(req.body.id);
+       try {
+         const id = parseInt(req.body.id);
         const targetItem = foodMenu.find(item => item.id === id)
         if (targetItem) {
             if (req.body.food) {
@@ -64,23 +78,31 @@ app.patch('/admin',(req,res) => {
         } else {
             res.status(404).send('Item Not Found')
         }
+       } catch (error) {
+        res.send('Some Error Occured : ', error)
+       }
 })
 
 
 // User viewing cart Items
 app.get('/user',(req,res) => {
-    if (userAddToCart.length > 0 ) {
+   try {
+     if (userAddToCart.length > 0 ) {
         res.status(200).send(userAddToCart);
     } else{
         res.status(401).send('Cart is Empty')
     }
+   } catch (error) {
+    res.send('Some Error Occured : ', error)
+   }
     
 })
 
 
 // User adding items to the cart 
 app.post('/user/:id',(req,res) => {
-    const id = parseInt(req.params.id)
+   try {
+     const id = parseInt(req.params.id)
     const targetItem = foodMenu.find(item => item.id === id)
     if (targetItem) {
         userAddToCart.push(targetItem)
@@ -88,12 +110,16 @@ app.post('/user/:id',(req,res) => {
     } else {
         res.status(400).send('Item out of stock')
     }
+   } catch (error) {
+    res.send('Some Error Occured : ', error)
+   }
 })
 
 
 // Removing an Item from User Add to Cart 
 app.delete('/user/:id',(req,res) => {
-    const id = parseInt(req.params.id);
+   try {
+     const id = parseInt(req.params.id);
     if (userAddToCart.length > 0) {
         const updatedUserAddToCart = userAddToCart.filter(item => item.id !== id)
         console.log(updatedUserAddToCart);
@@ -101,6 +127,9 @@ app.delete('/user/:id',(req,res) => {
     } else{
         res.send("Cart is Empty")
     }
+   } catch (error) {
+    res.send('Some Error Occured : ',error)
+   }
 })
 
 

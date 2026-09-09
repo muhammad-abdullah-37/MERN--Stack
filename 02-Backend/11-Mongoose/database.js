@@ -33,7 +33,7 @@ async function main() {
 
     // Finding or getting the data from database;
     const data = await User.find({});
-    console.log(data);
+    // console.log(data);
 
 
     // Finding or getting data based on a particular field;

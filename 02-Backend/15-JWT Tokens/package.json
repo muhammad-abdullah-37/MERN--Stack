@@ -4,6 +4,8 @@
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "mogoose": "^0.0.1-security",
-    "mongodb": "^7.6.0"
+    "mongodb": "^7.6.0",
+    "mongoose": "^9.10.0",
+    "validator": "^13.15.35"
   }
 }

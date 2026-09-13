@@ -7,7 +7,7 @@ const main = require('./database.js');
 const User = require('./models/users.js');
 const validateUser = require('./utils/validateUser.js')
 const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
+const userAuth = require('./middleware/userAthentication.js')
 
 // Data Parsing using Middleware
 app.use(express.json());
@@ -30,13 +30,12 @@ app.get('/info', async (req,res) => {
     }
 })
 
+
+
 //Fetching a single user based on ID;
-app.get('/user', async (req,res) => {
+app.get('/user',userAuth, async (req,res) => {
     try {
-        console.log('hello from jwt');
-        const payload = jwt.verify(req.cookies.token, 'Hello')
-        const targetUser = await User.findById(payload._id)
-        res.send(targetUser)
+        res.send(req.targetUser)
     } catch (error) {
         res.send(`Error in User Fetching : ${error.message}`)
     }
@@ -61,7 +60,7 @@ app.post('/register', async(req,res) => {
 
 
 // Deleting a User with ID 
-app.delete('/user/:id',async(req,res) => {
+app.delete('/user/:id',userAuth, async(req,res) => {
     try {
         await User.findByIdAndDelete(req.params.id)
         res.send('User Deleted')
@@ -69,8 +68,11 @@ app.delete('/user/:id',async(req,res) => {
         res.send(`Error in User Deletion : ${error.message}`);
     }
 })
+
+
+
 // PUT request for Updating a user
-app.put('/user',async (req,res) => {
+app.put('/user',userAuth, async(req,res) => {
     try {
         const {id, ...Update} = req.body;
         await User.findByIdAndUpdate(id,Update, {runValidators : true} )
@@ -102,6 +104,8 @@ app.post('/login', async(req,res) => {
         res.send(`Login Failed : ${error.message}`)
     }
 })
+
+
 // Function call for DB Connection
 main()
 .then(() => {

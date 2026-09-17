@@ -27,7 +27,7 @@ function Testimonials(props){
     }
 
     return (
-        <div className="w-[85vw] md:w-\[560px] h-[70vh] md:h-\[300px] bg-white flex flex-col justify-center items-center mt-10 p-10 transition-all duration-700 hover:shadow-xl rounded-md">
+        <div className="w-[50vw] md:w-\[560px] h-[50vh] md:h-\[300px] bg-white flex flex-col justify-center items-center mt-10 p-10 transition-all duration-700 hover:shadow-xl rounded-md border">
             <Card review={reviews[index]}/>
             <div className="flex text-1xl mt-4 gap-3 text-violet-400 font-bold justify-center">
                 <button onClick={leftShiftHandler}

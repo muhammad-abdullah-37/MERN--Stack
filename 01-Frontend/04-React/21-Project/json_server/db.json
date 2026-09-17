@@ -1,7 +1,415 @@
 {
   "$schema": ["./node_modules/json-server/schema.json"],
   "products": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
-  ]
+  {
+    "id": 1,
+    "name": "Margherita Pizza",
+    "category": "Pizza",
+    "price": 400,
+    "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002",
+    "description": "Classic pizza with tomato sauce, mozzarella cheese and fresh basil",
+    "ratings": 4.5,
+    "reviews": 125,
+    "inStock": true
+  },
+  {
+    "id": 2,
+    "name": "Pepperoni Pizza",
+    "category": "Pizza",
+    "price": 550,
+    "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e",
+    "description": "Cheesy pizza topped with spicy pepperoni slices",
+    "ratings": 4.7,
+    "reviews": 210,
+    "inStock": true
+  },
+  {
+    "id": 3,
+    "name": "Chicken Fajita Pizza",
+    "category": "Pizza",
+    "price": 650,
+    "image": "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e",
+    "description": "Loaded pizza with chicken fajita, onions, peppers and cheese",
+    "ratings": 4.6,
+    "reviews": 178,
+    "inStock": true
+  },
+  {
+    "id": 4,
+    "name": "Classic Beef Burger",
+    "category": "Burger",
+    "price": 450,
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
+    "description": "Juicy beef patty with lettuce, tomato, cheese and special sauce",
+    "ratings": 4.5,
+    "reviews": 156,
+    "inStock": true
+  },
+  {
+    "id": 5,
+    "name": "Chicken Burger",
+    "category": "Burger",
+    "price": 400,
+    "image": "https://images.unsplash.com/photo-1615297928064-24977384d0d4",
+    "description": "Crispy chicken fillet burger with fresh lettuce and creamy sauce",
+    "ratings": 4.4,
+    "reviews": 132,
+    "inStock": true
+  },
+  {
+    "id": 6,
+    "name": "Zinger Burger",
+    "category": "Burger",
+    "price": 480,
+    "image": "https://images.unsplash.com/photo-1606755962773-d324e0a13086",
+    "description": "Crispy spicy chicken burger with lettuce and signature sauce",
+    "ratings": 4.8,
+    "reviews": 245,
+    "inStock": true
+  },
+  {
+    "id": 7,
+    "name": "Chicken Biryani",
+    "category": "Rice",
+    "price": 350,
+    "image": "https://images.unsplash.com/photo-1563379091339-03246963d51a",
+    "description": "Aromatic basmati rice cooked with spiced chicken and herbs",
+    "ratings": 4.7,
+    "reviews": 320,
+    "inStock": true
+  },
+  {
+    "id": 8,
+    "name": "Beef Biryani",
+    "category": "Rice",
+    "price": 450,
+    "image": "https://images.unsplash.com/photo-1631515242808-497c3fbd3972",
+    "description": "Flavorful basmati rice prepared with tender beef and traditional spices",
+    "ratings": 4.5,
+    "reviews": 185,
+    "inStock": true
+  },
+  {
+    "id": 9,
+    "name": "Chicken Pulao",
+    "category": "Rice",
+    "price": 320,
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19",
+    "description": "Fragrant rice cooked with tender chicken and mild aromatic spices",
+    "ratings": 4.3,
+    "reviews": 118,
+    "inStock": true
+  },
+  {
+    "id": 10,
+    "name": "Chicken Karahi",
+    "category": "Pakistani",
+    "price": 750,
+    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950",
+    "description": "Traditional chicken karahi cooked with tomatoes, ginger and green chilies",
+    "ratings": 4.8,
+    "reviews": 275,
+    "inStock": true
+  },
+  {
+    "id": 11,
+    "name": "Beef Karahi",
+    "category": "Pakistani",
+    "price": 850,
+    "image": "https://images.unsplash.com/photo-1547592180-85f173990554",
+    "description": "Tender beef cooked in a rich tomato-based karahi masala",
+    "ratings": 4.6,
+    "reviews": 194,
+    "inStock": true
+  },
+  {
+    "id": 12,
+    "name": "Chicken Handi",
+    "category": "Pakistani",
+    "price": 700,
+    "image": "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db",
+    "description": "Creamy chicken handi prepared with tomatoes, cream and aromatic spices",
+    "ratings": 4.5,
+    "reviews": 163,
+    "inStock": true
+  },
+  {
+    "id": 13,
+    "name": "Chicken Tikka",
+    "category": "BBQ",
+    "price": 450,
+    "image": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0",
+    "description": "Grilled chicken pieces marinated with yogurt and traditional spices",
+    "ratings": 4.7,
+    "reviews": 230,
+    "inStock": true
+  },
+  {
+    "id": 14,
+    "name": "Seekh Kebab",
+    "category": "BBQ",
+    "price": 500,
+    "image": "https://images.unsplash.com/photo-1529042410759-befb1204b468",
+    "description": "Juicy minced beef kebabs grilled with herbs and aromatic spices",
+    "ratings": 4.6,
+    "reviews": 198,
+    "inStock": true
+  },
+  {
+    "id": 15,
+    "name": "Malai Boti",
+    "category": "BBQ",
+    "price": 550,
+    "image": "https://images.unsplash.com/photo-1532550907401-a500c9a57435",
+    "description": "Tender creamy chicken pieces marinated with mild spices and grilled",
+    "ratings": 4.8,
+    "reviews": 221,
+    "inStock": true
+  },
+  {
+    "id": 16,
+    "name": "Chicken Chow Mein",
+    "category": "Chinese",
+    "price": 450,
+    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246",
+    "description": "Stir-fried noodles with chicken, vegetables and savory Asian sauce",
+    "ratings": 4.4,
+    "reviews": 145,
+    "inStock": true
+  },
+  {
+    "id": 17,
+    "name": "Chicken Manchurian",
+    "category": "Chinese",
+    "price": 500,
+    "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d",
+    "description": "Crispy chicken served with a tangy and spicy Manchurian sauce",
+    "ratings": 4.5,
+    "reviews": 167,
+    "inStock": true
+  },
+  {
+    "id": 18,
+    "name": "Fried Rice",
+    "category": "Chinese",
+    "price": 350,
+    "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b",
+    "description": "Wok-fried rice with vegetables, eggs and flavorful Asian seasoning",
+    "ratings": 4.3,
+    "reviews": 129,
+    "inStock": true
+  },
+  {
+    "id": 19,
+    "name": "Chicken Pasta",
+    "category": "Pasta",
+    "price": 500,
+    "image": "https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb",
+    "description": "Creamy pasta tossed with grilled chicken and Italian herbs",
+    "ratings": 4.6,
+    "reviews": 176,
+    "inStock": true
+  },
+  {
+    "id": 20,
+    "name": "Alfredo Pasta",
+    "category": "Pasta",
+    "price": 550,
+    "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601",
+    "description": "Creamy fettuccine pasta prepared with parmesan cheese and herbs",
+    "ratings": 4.7,
+    "reviews": 205,
+    "inStock": true
+  },
+  {
+    "id": 21,
+    "name": "Chicken Sandwich",
+    "category": "Sandwich",
+    "price": 350,
+    "image": "https://images.unsplash.com/photo-1553909489-cd47e0907980",
+    "description": "Grilled chicken sandwich with lettuce, tomato and creamy dressing",
+    "ratings": 4.4,
+    "reviews": 112,
+    "inStock": true
+  },
+  {
+    "id": 22,
+    "name": "Club Sandwich",
+    "category": "Sandwich",
+    "price": 450,
+    "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af",
+    "description": "Triple-layer sandwich with chicken, egg, cheese, lettuce and tomato",
+    "ratings": 4.6,
+    "reviews": 189,
+    "inStock": true
+  },
+  {
+    "id": 23,
+    "name": "French Fries",
+    "category": "Sides",
+    "price": 200,
+    "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877",
+    "description": "Crispy golden fries seasoned with a light blend of spices",
+    "ratings": 4.5,
+    "reviews": 260,
+    "inStock": true
+  },
+  {
+    "id": 24,
+    "name": "Loaded Fries",
+    "category": "Sides",
+    "price": 350,
+    "image": "https://images.unsplash.com/photo-1585109649139-366815a0d713",
+    "description": "Crispy fries topped with cheese, chicken and special sauce",
+    "ratings": 4.7,
+    "reviews": 175,
+    "inStock": true
+  },
+  {
+    "id": 25,
+    "name": "Chicken Nuggets",
+    "category": "Sides",
+    "price": 300,
+    "image": "https://images.unsplash.com/photo-1562967916-eb82221dfb92",
+    "description": "Golden crispy chicken nuggets served with a creamy dipping sauce",
+    "ratings": 4.4,
+    "reviews": 142,
+    "inStock": true
+  },
+  {
+    "id": 26,
+    "name": "Chocolate Cake",
+    "category": "Dessert",
+    "price": 300,
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587",
+    "description": "Rich and moist chocolate cake covered with smooth chocolate frosting",
+    "ratings": 4.8,
+    "reviews": 215,
+    "inStock": true
+  },
+  {
+    "id": 27,
+    "name": "Cheesecake",
+    "category": "Dessert",
+    "price": 350,
+    "image": "https://images.unsplash.com/photo-1565958011703-44f9829ba187",
+    "description": "Creamy cheesecake with a buttery biscuit base and berry topping",
+    "ratings": 4.7,
+    "reviews": 187,
+    "inStock": true
+  },
+  {
+    "id": 28,
+    "name": "Chocolate Brownie",
+    "category": "Dessert",
+    "price": 250,
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e",
+    "description": "Soft and fudgy chocolate brownie with a rich cocoa flavor",
+    "ratings": 4.6,
+    "reviews": 156,
+    "inStock": true
+  },
+  {
+    "id": 29,
+    "name": "Mango Shake",
+    "category": "Drinks",
+    "price": 250,
+    "image": "https://images.unsplash.com/photo-1623065422902-30a2d299bbe4",
+    "description": "Refreshing creamy mango shake made with fresh ripe mangoes",
+    "ratings": 4.5,
+    "reviews": 134,
+    "inStock": true
+  },
+  {
+    "id": 30,
+    "name": "Fresh Lime",
+    "category": "Drinks",
+    "price": 180,
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd",
+    "description": "Refreshing chilled lime drink with fresh lemon and mint",
+    "ratings": 4.3,
+    "reviews": 98,
+    "inStock": true
+  }
+],
+"orders" : [
+    {
+        "id" : 1,
+        "userId" : 1,
+        "items" : [
+            {"productId" : 1,"qunatity" : 2,"price" : 800},{"productId" : 5,"qunatity" : 3,"price" : 660}
+        ],
+        "totalAmount" : 1460,
+        "status" : "completed",
+        "createdAt" : "2026-09-17T14:30:00.000Z"
+    },
+     { 
+    "id" : 2,
+     "userId" : 2,
+     "items" : [
+        {"productId" : 7,"qunatity" : 3,"price" : 1050},{"productId" : 5,"qunatity" : 3,"price" : 660}
+    ],
+        "totalAmount" : 1710,
+        "status" : "completed",
+        "createdAt" : "2026-09-17T14:30:00.000Z"
+    }
+
+],
+"cart" : [
+    {
+    "id": 1,
+    "userId" :1,
+    "productId" : 2,
+    "qunatity" : 1,
+    "createdAt" : "2026-09-17T14:30:00.000Z" 
+    }
+],
+"users" : [
+    {
+        "id" : 1,
+        "name" : "Muhammad Abdullah",
+        "emailAddress" : "demo@gamil.com",
+        "password" : "123456789",
+        "createdAt" : "2026-09-17T14:30:00.000Z"
+    },
+     {
+        "id" : 1,
+        "name" : "John Wick",
+        "emailAddress" : "johan@gamil.com",
+        "password" : "123456",
+        "createdAt" : "2026-09-17T14:30:00.000Z"
+    }
+],
+"categories" : [
+    {
+        "id" : 1,
+        "name" : "Pizza",
+        "description" : "Delicious Italian Pizza"
+    },
+    {
+        "id" : 2,
+        "name" : "Burger",
+        "description" : "Delicious, juicy and tasty burger"
+    },
+    {
+        "id" : 3,
+        "name" : "Salad",
+        "description" : "Fresh and Healthy salad"
+    },
+    {
+        "id" : 4,
+        "name" : "Pasta",
+        "description" : "Creamy and sauciy pasta"
+    },
+    {
+        "id" : 5,
+        "name" : "Beverages",
+        "description" : "Refershing drinks"
+    },
+    {
+        "id" : 6,
+        "name" : "Desserts",
+        "description" : "Sweets and desserts"
+    }
+]
 }

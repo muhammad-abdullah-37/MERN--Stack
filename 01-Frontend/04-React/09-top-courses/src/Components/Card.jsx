@@ -1,4 +1,3 @@
-import { click } from '@testing-library/user-event/dist/click';
 import { FcLike, FcLikePlaceholder } from 'react-icons/fc';
 import { toast } from 'react-toastify';
 
@@ -29,7 +28,7 @@ const Card = (props) => {
     return (
         <div className='bg-bgDark bg-opacity-80 w-[300px] rounded-md overflow-hidden'>
             <div className='relative '>
-                <img src={props.course.image.url} alt="Course Image" className='' />
+                <img src={props.course.image.url} alt="Course"/>
 
                 <div className='rounded-full w-[40px] h-[40px] bg-white absolute right-2 bottom-[-12px] grid place-items-center'>
                     <button onClick={clickHandler}>

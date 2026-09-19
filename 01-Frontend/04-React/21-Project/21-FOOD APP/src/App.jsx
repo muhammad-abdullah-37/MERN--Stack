@@ -1,9 +1,12 @@
 
 import './App.css'
+import AppRoutes from './routes/AppRoutes'
 
 function App() {
   return (
-    <div className='text-4x bg-black text-white'>Foodie</div>
+    <div>
+      <AppRoutes/>
+    </div>
   )
 }
 

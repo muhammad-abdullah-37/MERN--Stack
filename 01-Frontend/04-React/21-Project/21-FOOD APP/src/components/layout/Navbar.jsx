@@ -15,7 +15,7 @@ function Navbar() {
                 </div>
 
                 <div>
-                   <button className="bg-orange-500 text-white px-5 py-2 rounded hover:bg-orange-600">{isLoggedIn ? ('Logout') : ('Login')}</button>
+                   <button className="bg-orange-500 text-white px-5 py-2 rounded hover:bg-orange-600 cursor-pointer">{isLoggedIn ? ('Logout') : ('Login')}</button>
                 </div>
             </nav>
         </header>

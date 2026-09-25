@@ -46,17 +46,6 @@
     "inStock": true
   },
   {
-    "id": 5,
-    "name": "Chicken Burger",
-    "category": "Burger",
-    "price": 400,
-    "image": "https://images.unsplash.com/photo-1615297928064-24977384d0d4",
-    "description": "Crispy chicken fillet burger with fresh lettuce and creamy sauce",
-    "ratings": 4.4,
-    "reviews": 132,
-    "inStock": true
-  },
-  {
     "id": 6,
     "name": "Zinger Burger",
     "category": "Burger",
@@ -65,17 +54,6 @@
     "description": "Crispy spicy chicken burger with lettuce and signature sauce",
     "ratings": 4.8,
     "reviews": 245,
-    "inStock": true
-  },
-  {
-    "id": 7,
-    "name": "Chicken Biryani",
-    "category": "Rice",
-    "price": 350,
-    "image": "https://images.unsplash.com/photo-1563379091339-03246963d51a",
-    "description": "Aromatic basmati rice cooked with spiced chicken and herbs",
-    "ratings": 4.7,
-    "reviews": 320,
     "inStock": true
   },
   {

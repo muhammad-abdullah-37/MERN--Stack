@@ -30,7 +30,7 @@ function HomePage () {
                         {
                             loading ? (<Loader/>) : 
                             products.map((product) =>{
-                                return <ProductCard product={product}/>
+                                return <ProductCard product={product} key={product.id}/>
                             })
                         }
                     </div>
